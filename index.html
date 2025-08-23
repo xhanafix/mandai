@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandai Kulit Cempedak Asli | Resepi Tradisional Banjar | Beli Online Malaysia</title>
+    <meta name="description" content="Temui keunikan rasa Mandai Kulit Cempedak, hidangan tradisional Banjar asli. Nikmati tekstur seperti daging, sesuai untuk pelbagai masakan. Beli Mandai online di Malaysia sekarang!">
+    <meta name="keywords" content="Mandai Kulit Cempedak, Mandai, Resepi Banjar, Makanan Tradisional Malaysia, Cempedak Fermentasi, Beli Mandai Online, Lauk Pauk Tradisional, Rasa Unik">
+    <link rel="canonical" href="https://yourwebsite.com/mandai-kulit-cempedak"> <!-- Replace with your actual canonical URL -->
+
+    <!-- Preload critical resources for faster loading -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1627960309193-9c869e5d7966?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons (loaded asynchronously to prevent render blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    
+    <style>
+        /* Custom CSS to enhance UI beyond basic Tailwind (minimal as requested) */
+
+        /* Custom Keyframes for fade-in-up animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-800 { animation-delay: 0.8s; }
+
+        /* Hero Section Background Image & Overlay */
+        .hero-bg {
+            background: linear-gradient(270deg, #2E8B57, #6B8E23, #FFD700, #CD853F); /* Animated gradient colors: Sea Green, Olive Drab, Gold, Peru */
+            background-size: 400% 400%; /* Larger size for animation */
+            animation: gradientAnimation 15s ease infinite; /* Apply gradient animation */
+        }
+        .hero-overlay {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+        }
+        /* Keyframes for the gradient background animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Subtle Background Pattern for sections */
+        .section-bg-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png'); /* A subtle, food-friendly texture */
+            background-repeat: repeat;
+            background-color: inherit; /* Ensure it respects the Tailwind bg color */
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Initial state for section animations (hidden) */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        /* Visible state for section animations */
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-orange-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 fixed w-full z-50 animate-fade-in-down">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-green-700 tracking-wide">Mandai Ku</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#tentang" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Tentang Kami</a>
+                <a href="#rasa" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Rasa Unik</a>
+                <a href="#kepelbagaian" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Kepelbagaian</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Testimoni</a>
+                <a href="#beli" class="text-green-700 font-bold text-lg hover:text-green-800 transition duration-300">Beli Sekarang!</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-green-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-4 mt-2">
+            <a href="#tentang" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Tentang Kami</a>
+            <a href="#rasa" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Rasa Unik</a>
+            <a href="#kepelbagaian" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Kepelbagaian</a>
+            <a href="#testimoni" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Testimoni</a>
+            <a href="#beli" class="block px-6 py-3 text-green-700 font-bold hover:bg-gray-100">Beli Sekarang!</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center relative pt-20">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 px-6 py-16 max-w-5xl mx-auto text-white">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-lg animate-fade-in-up">
+                Rasa Yang Hilang Ditemui Kembali: <span class="text-yellow-400">Mandai Kulit Cempedak!</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light mb-10 drop-shadow-md animate-fade-in-up delay-200">
+                Dari Buah Cempedak Biasa, Terlahirlah Khazanah Kulinari Warisan Banjar yang Menggoda Selera. <br class="hidden md:inline"> Nikmati Keasliannya!
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center animate-fade-in-up delay-400">
+                <a href="https://s.shopee.com.my/1qS4Ok1Lqy" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg">
+                    <i class="fas fa-shopping-basket mr-2"></i> Beli Sekarang!
+                </a>
+                <a href="#tentang" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:bg-white hover:text-green-700 text-lg">
+                    <i class="fas fa-info-circle mr-2"></i> Kenali Mandai
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Mandai / Introduction Section -->
+    <section id="tentang" class="py-16 md:py-28 bg-orange-50 section-bg-pattern section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-orange-50 px-4">Kisah di Sebalik Mandai Kulit Cempedak</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://github.com/xhanafix/mandai/blob/main/IMG_20250816_162154.jpg?raw=true" alt="Cempedak fruit and traditional preparation" loading="lazy" class="rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out object-cover w-full h-72 md:h-96 border-4 border-yellow-300">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed space-y-6">
+                    <p>
+                        Pernahkah anda mendengar tentang keajaiban kulinari yang lahir dari kebijaksanaan nenek moyang kita? Kami perkenalkan <strong class="text-green-700 font-semibold">Mandai Kulit Cempedak</strong> – sebuah hidangan tradisional istimewa dari masyarakat Banjar, yang berasal dari Kalimantan, Indonesia, dan turut popular di Malaysia.
+                    </p>
+                    <p>
+                        Bukan sekadar lauk pauk, Mandai adalah cerita tentang bagaimana kreativiti dapat mengubah sesuatu yang sering dibuang – kulit cempedak yang tebal dan putih – menjadi khazanah rasa yang tiada bandingnya. Melalui proses pengawetan unik dengan air dan garam selama beberapa hari, kulit cempedak ini <strong class="text-yellow-600 font-semibold">difermentasi</strong>, menghasilkan rasa dan tekstur yang luar biasa. Ia adalah semangat <strong class="text-red-500 font-semibold">'tiada sisa'</strong> yang diamalkan sejak dahulu kala, dihidupkan semula untuk anda!
+                    </p>
+                    <p>
+                        Mandai bukan hidangan biasa yang mudah dijumpai, ia adalah permata tersembunyi yang kini boleh anda nikmati. Rasai keajaiban transformasi <em class="italic">'dari buah kepada hidangan istimewa'</em> di setiap suapan!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Taste & Texture Section -->
+    <section id="rasa" class="py-16 md:py-28 bg-gray-100 section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-gray-100 px-4">Membongkar Profil Rasa & Tekstur Unik</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed space-y-6 order-2 md:order-1">
+                    <p>
+                        Bersiaplah untuk pengalaman rasa yang tiada duanya! Mandai Kulit Cempedak menawarkan profil rasa yang sangat unik dan kompleks. Ia adalah gabungan sempurna antara rasa <strong class="text-green-700 font-semibold">savuri</strong> yang mendalam, sentuhan <strong class="text-red-600 font-semibold">masam</strong> yang menyegarkan, dan sedikit <strong class="text-yellow-600 font-semibold">kemanisan semula jadi</strong> dari buah cempedak itu sendiri. Setiap gigitan adalah ledakan cita rasa yang memukau deria anda.
+                    </p>
+                    <p>
+                        Dan teksturnya? Ia benar-benar luar biasa! Mandai sering dibandingkan dengan <strong class="text-green-700 font-semibold">daging berserat seperti isi ayam yang dicarik</strong>. Kekal elok bila dimasak, ia menawarkan 'gigitan' yang memuaskan dan tidak mudah hancur. Bayangkan gabungan rasa dan tekstur ini dalam hidangan kegemaran anda – pasti akan membuat anda teruja!
+                    </p>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+                    <img src="https://github.com/xhanafix/mandai/blob/main/IMG_20250816_162056.jpg?raw=true" alt="Cooked Mandai dish close-up" loading="lazy" class="rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out object-cover w-full h-72 md:h-96 border-4 border-yellow-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Versatility / How to Enjoy Section -->
+    <section id="kepelbagaian" class="py-16 md:py-28 bg-orange-50 section-bg-pattern section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-orange-50 px-4">Kepelbagaian Dalam Setiap Gigitan: Hidangan Serbaguna!</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 text-center mb-12 font-light">
+                Mandai bukan sekadar hidangan sampingan; ia adalah bintang yang boleh bersinar dalam pelbagai resipi!
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-green-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Tumis Pedas Menggoda</h3>
+                    <p class="text-gray-700 text-lg">
+                        Cara paling popular! Tumis Mandai bersama cili, bawang, bawang putih, dan ikan bilis untuk lauk yang membangkitkan selera dan sesuai dimakan dengan nasi panas. Rasa masam manis pedasnya pasti membuatkan anda ketagih!
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-yellow-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Snek Rangup & Nikmat</h3>
+                    <p class="text-gray-700 text-lg">
+                        Inginkan snek yang unik? Goreng Mandai sehingga rangup keemasan. Teksturnya yang renyah dan rasanya yang unik menjadikannya snek yang sempurna untuk dinikmati bila-bila masa.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-red-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Campuran dalam Masakan Lain</h3>
+                    <p class="text-gray-700 text-lg">
+                        Tambahkan Mandai ke dalam masakan gulai, sup, atau sebagai inti karipap untuk kelainan rasa. Kreativiti anda adalah batasnya! Ia akan menambah kedalaman rasa yang unik pada setiap hidangan.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-blue-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Rasa Nostalgia Kampung</h3>
+                    <p class="text-gray-700 text-lg">
+                        Bagi mereka yang membesar dengan masakan Banjar, Mandai adalah rasa pulang ke kampung halaman, mengimbau kenangan manis dan tradisi yang tidak lapuk dek zaman.
+                    </p>
+                </div>
+            </div>
+
+            <p class="text-center text-2xl md:text-3xl text-green-800 font-bold mt-12 leading-snug">
+                Jadi, apa tunggu lagi? Bawa Mandai Kulit Cempedak ke dapur anda dan biarkan ia menyemarakkan selera!
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-16 md:py-28 bg-gray-100 section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-gray-100 px-4">Apa Kata Mereka yang Sudah Mencuba?</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-green-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Rasa Mandai ni betul-betul macam arwah nenek saya buat! Terbaik, menggamit memori lama. Kualiti pun terjamin!"
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Puan Salmah, Peminat Tradisi</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-yellow-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Tak sangka kulit cempedak boleh jadi seunik dan sesedap ni! Memang lain dari yang lain, wajib cuba bagi pencari rasa baru!"
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Encik Johan, Penggemar Eksperimen Kuliner</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-red-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Mudah sangat nak masak, terus jadi lauk favorite keluarga. Anak-anak pun suka! Senang kerja di dapur, dan puas hati dapat hidangkan makanan warisan."
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Cik Amy, Suri Rumah Moden</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="beli" class="py-16 md:py-28 bg-green-700 text-white text-center section-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 drop-shadow-lg leading-tight">
+                Jangan Tunggu Lagi! Rasai Keajaiban Mandai Kulit Cempedak Sekarang!
+            </h2>
+            <p class="text-xl md:text-2xl font-light mb-12">
+                Klik butang di bawah untuk mendapatkan Mandai Kulit Cempedak asli anda di kedai pilihan.
+                Sokong warisan, nikmati kelazatan!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                <a href="https://s.shopee.com.my/1qS4Ok1Lqy" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg" alt="Shopee Logo" class="w-8 h-8 mr-3 filter drop-shadow-md"> Rasai Warisan Banjar di Shopee!
+                </a>
+                <a href="https://vt.tiktok.com/ZSABh3V2P/" target="_blank" class="bg-gray-800 hover:bg-black text-white font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <i class="fab fa-tiktok text-3xl mr-3 drop-shadow-md"></i> Dapatkan Mandai Asli di TikTok Shop!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="page-bottom" class="bg-gray-900 text-gray-300 py-10 md:py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">&copy; <span id="year"></span> Mandai Kulit Cempedak. Hak Cipta Terpelihara.</p>
+            <p class="mt-3 text-sm">Dicipta dengan semangat warisan Banjar dan cita rasa tempatan.</p>
+            <div class="flex justify-center space-x-6 mt-6 text-xl">
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Section Fade-in Animation on Scroll using Intersection Observer API
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    entry.target.classList.remove('section-hidden');
+                    sectionObserver.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, {
+            root: null, // viewport as the root
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        });
+
+        // Add initial 'section-hidden' class to all sections except the hero
+        document.querySelectorAll('section:not(#hero)').forEach(section => {
+            section.classList.add('section-hidden');
+            sectionObserver.observe(section); // Start observing each section
+        });
+    </script>
+</body>
+</html>
