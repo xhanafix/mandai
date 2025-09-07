@@ -9,8 +9,6 @@
     <link rel="canonical" href="https://yourwebsite.com/mandai-kulit-cempedak"> <!-- Replace with your actual canonical URL -->
 
     <!-- Preload critical resources for faster loading -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1627960309193-9c869e5d7966?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome for Icons (loaded asynchronously to prevent render blocking) -->
@@ -91,7 +89,9 @@
     <!-- Navbar -->
     <nav class="bg-white shadow-md py-4 fixed w-full z-50 animate-fade-in-down">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-green-700 tracking-wide">Mandai Ku</a>
+            <a href="#" class="flex items-center">
+                <span class="text-2xl font-bold text-green-700">Nendago</span>
+            </a>
             <div class="hidden md:flex space-x-6">
                 <a href="#tentang" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Tentang Kami</a>
                 <a href="#rasa" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Rasa Unik</a>
@@ -237,6 +237,13 @@
                 </div>
             </div>
 
+            <div class="mt-16 mb-12 text-center">
+                <h3 class="text-3xl font-bold text-green-700 mb-8">Video Resipi: Cara Mudah Masak Mandai!</h3>
+                <div class="flex justify-center">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nendagohq/video/7544620005833411847" data-video-id="7544620005833411847" style="max-width: 605px;min-height: 300px;" > <section> <a target="_blank" title="@nendagohq" href="https://www.tiktok.com/@nendagohq?refer=embed">@nendagohq</a> <p>Cara masak mandai kulit cempedak 🤤</p> <a target="_blank" title="♬ original sound - NENDA GOHQ" href="https://www.tiktok.com/music/original-sound-7544620092109400839?refer=embed">♬ original sound - NENDA GOHQ</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+            </div>
+
             <p class="text-center text-2xl md:text-3xl text-green-800 font-bold mt-12 leading-snug">
                 Jadi, apa tunggu lagi? Bawa Mandai Kulit Cempedak ke dapur anda dan biarkan ia menyemarakkan selera!
             </p>
@@ -273,6 +280,17 @@
                     </p>
                     <p class="font-bold text-green-700 text-xl">- Cik Amy, Suri Rumah Moden</p>
                 </div>
+                <!-- Wrapper for the two image testimonials to ensure balanced display in a 3-column grid -->
+                <div class="md:col-span-3 flex flex-col sm:flex-row justify-center items-stretch gap-10">
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col h-full items-center justify-center transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-blue-500 flex-1">
+                        <img src="https://github.com/xhanafix/mandai/blob/e7251d2350420b51ca4cfefc9d8aa697c1974e45/Screenshot_2025-09-07-14-04-12-361_com.zhiliaoapp.musically.jpg?raw=true" alt="Maklum Balas Pelanggan Mandai di media sosial" loading="lazy" class="rounded-xl object-contain w-full h-80" />
+                        <p class="font-bold text-green-700 text-md sm:text-lg mt-4 text-center">- Maklum Balas Pelanggan</p>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col h-full items-center justify-center transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-purple-500 flex-1">
+                        <img src="https://github.com/xhanafix/mandai/blob/e7251d2350420b51ca4cfefc9d8aa697c1974e45/Screenshot_2025-09-07-14-04-17-919_com.zhiliaoapp.musically.jpg?raw=true" alt="Komen Pelanggan Mandai di media sosial" loading="lazy" class="rounded-xl object-contain w-full h-80" />
+                        <p class="font-bold text-green-700 text-md sm:text-lg mt-4 text-center">- Komen Pelanggan</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -301,7 +319,7 @@
     <!-- Footer -->
     <footer id="page-bottom" class="bg-gray-900 text-gray-300 py-10 md:py-12">
         <div class="container mx-auto px-6 text-center">
-            <p class="text-lg">&copy; <span id="year"></span> Mandai Kulit Cempedak. Hak Cipta Terpelihara.</p>
+            <p class="text-lg">&copy; <span id="year"></span> Banjar Bites Empire (202503219414). Hak Cipta Terpelihara.</p>
             <p class="mt-3 text-sm">Dicipta dengan semangat warisan Banjar dan cita rasa tempatan.</p>
             <div class="flex justify-center space-x-6 mt-6 text-xl">
                 <a href="https://www.facebook.com/nendago" target="_blank" rel="noopener noreferrer" class="hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
