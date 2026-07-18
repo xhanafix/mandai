@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandai Kulit Cempedak Asli | Resepi Tradisional Banjar | Beli Online Malaysia</title>
+    <meta name="description" content="Temui keunikan rasa Mandai Kulit Cempedak, hidangan tradisional Banjar asli. Nikmati tekstur seperti daging, sesuai untuk pelbagai masakan. Beli Mandai online di Malaysia sekarang!">
+    <meta name="keywords" content="Mandai Kulit Cempedak, Mandai, Resepi Banjar, Makanan Tradisional Malaysia, Cempedak Fermentasi, Beli Mandai Online, Lauk Pauk Tradisional, Rasa Unik">
+    <link rel="canonical" href="https://yourwebsite.com/mandai-kulit-cempedak"> <!-- Replace with your actual canonical URL -->
+
+    <!-- Preconnect to necessary domains for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.transparenttextures.com">
+    <link rel="dns-prefetch" href="https://www.transparenttextures.com">
+    <link rel="preconnect" href="https://github.com">
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="preconnect" href="https://upload.wikimedia.org">
+    <link rel="dns-prefetch" href="https://upload.wikimedia.org">
+    <link rel="preconnect" href="https://www.tiktok.com">
+    <link rel="dns-prefetch" href="https://www.tiktok.com">
+
+    <!-- Preload critical resources for faster loading -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons (loaded asynchronously to prevent render blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    
+    <style>
+        /* Custom CSS to enhance UI beyond basic Tailwind (minimal as requested) */
+
+        /* Custom Keyframes for fade-in-up animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 40px, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-600 { animation-delay: 0.6s; }
+        .delay-800 { animation-delay: 0.8s; }
+
+        /* Hero Section Background Image & Overlay */
+        .hero-bg {
+            background: linear-gradient(270deg, #2E8B57, #6B8E23, #FFD700, #CD853F); /* Animated gradient colors: Sea Green, Olive Drab, Gold, Peru */
+            background-size: 400% 400%; /* Larger size for animation */
+            animation: gradientAnimation 15s ease infinite; /* Apply gradient animation */
+        }
+        .hero-overlay {
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+        }
+        /* Keyframes for the gradient background animation */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Subtle Background Pattern for sections */
+        .section-bg-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png'); /* A subtle, food-friendly texture */
+            background-repeat: repeat;
+            background-color: inherit; /* Ensure it respects the Tailwind bg color */
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Initial state for section animations (hidden) */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        /* Visible state for section animations */
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Testimonial Carousel Styles */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        #carousel-track {
+            /* Transitions controlled by JS, base styles here */
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+        .whatsapp-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
+            background-color: #128C7E;
+        }
+        .whatsapp-btn i {
+            margin-top: 2px;
+        }
+
+        /* Floating CTA Bar */
+        .floating-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            padding: 10px 16px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0);
+        }
+        .floating-cta-bar a {
+            flex: 1;
+            max-width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            padding: 10px 12px;
+            border-radius: 9999px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .floating-cta-bar a:hover {
+            transform: translateY(-2px);
+        }
+        .floating-cta-bar .cta-shopee {
+            background-color: #ee4d2d;
+            color: white;
+        }
+        .floating-cta-bar .cta-tiktok {
+            background-color: #000000;
+            color: white;
+        }
+        .floating-cta-bar img {
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+        }
+        @media (max-width: 640px) {
+            .floating-cta-bar a {
+                font-size: 12px;
+                padding: 8px 8px;
+            }
+            .floating-cta-bar img {
+                width: 16px;
+                height: 16px;
+            }
+            body {
+                padding-bottom: 60px;
+            }
+        }
+
+        /* FOMO Social Proof Notification */
+        .fomo-notification {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            z-index: 999;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 280px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .fomo-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .fomo-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+        .fomo-text {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.3;
+        }
+        .fomo-text strong {
+            color: #2E8B57;
+        }
+        @media (max-width: 640px) {
+            .fomo-notification {
+                left: 10px;
+                bottom: 80px;
+                max-width: 220px;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-orange-50">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 fixed w-full z-50 top-0 animate-fade-in-down">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://github.com/xhanafix/mandai/blob/main/Gemini_Generated_Image_u55k5qu55k5qu55k.png?raw=true" alt="Nendago Logo" class="h-20 w-auto rounded-full bg-white p-1 shadow-sm" width="150" height="150" loading="lazy">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#tentang" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Tentang Kami</a>
+                <a href="#rasa" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Rasa Unik</a>
+                <a href="#kepelbagaian" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Kepelbagaian</a>
+                <a href="#review" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Review</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-green-700 text-lg font-medium transition duration-300">Testimoni</a>
+                <a href="#beli" class="text-green-700 font-bold text-lg hover:text-green-800 transition duration-300">Beli Sekarang!</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-green-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg py-4 mt-2">
+            <a href="#tentang" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Tentang Kami</a>
+            <a href="#rasa" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Rasa Unik</a>
+            <a href="#kepelbagaian" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Kepelbagaian</a>
+            <a href="#review" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Review</a>
+            <a href="#testimoni" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Testimoni</a>
+            <a href="#beli" class="block px-6 py-3 text-green-700 font-bold hover:bg-gray-100">Beli Sekarang!</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center relative pt-20">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 px-6 py-16 max-w-5xl mx-auto text-white">
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight mb-6 drop-shadow-lg animate-fade-in-up">
+                Rasa Yang Hilang Ditemui Kembali: <span class="text-yellow-400">Mandai Kulit Cempedak!</span>
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light mb-10 drop-shadow-md animate-fade-in-up delay-200">
+                Dari Buah Cempedak Biasa, Terlahirlah Khazanah Kulinari Warisan Banjar yang Menggoda Selera. <br class="hidden md:inline"> Nikmati Keasliannya!
+            </p>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center animate-fade-in-up delay-400">
+                <a href="https://s.shopee.com.my/1qS4Ok1Lqy" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg" alt="Shopee Logo" class="w-6 h-6 mr-2 filter drop-shadow-md" width="24" height="24"> Beli di Shopee!
+                </a>
+                <a href="https://vt.tiktok.com/ZS9Mn8WL1LQ6w-PdSxo/" target="_blank" rel="noopener noreferrer" class="bg-gray-800 hover:bg-black text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <i class="fab fa-tiktok text-xl mr-2 drop-shadow-md"></i> Beli di TikTok Shop!
+                </a>
+                <a href="#tentang" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:bg-white hover:text-green-700 text-lg">
+                    <i class="fas fa-info-circle mr-2"></i> Kenali Mandai
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Mandai / Introduction Section -->
+    <section id="tentang" class="py-16 md:py-28 bg-orange-50 section-bg-pattern section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-orange-50 px-4">Kisah di Sebalik Mandai Kulit Cempedak</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://github.com/xhanafix/mandai/blob/main/IMG_20250816_162154.jpg?raw=true" alt="Cempedak fruit and traditional preparation" loading="lazy" class="rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out object-cover w-full h-72 md:h-96 border-4 border-yellow-300" width="600" height="400">
+                </div>
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed space-y-6">
+                    <p>
+                        Pernahkah anda mendengar tentang keajaiban kulinari yang lahir dari kebijaksanaan nenek moyang kita? Kami perkenalkan <strong class="text-green-700 font-semibold">Mandai Kulit Cempedak</strong> – sebuah hidangan tradisional istimewa dari masyarakat Banjar, yang berasal dari Kalimantan, Indonesia, dan turut popular di Malaysia.
+                    </p>
+                    <p>
+                        Bukan sekadar lauk pauk, Mandai adalah cerita tentang bagaimana kreativiti dapat mengubah sesuatu yang sering dibuang – kulit cempedak yang tebal dan putih – menjadi khazanah rasa yang tiada bandingnya. Melalui proses pengawetan unik dengan air dan garam selama beberapa hari, kulit cempedak ini <strong class="text-yellow-600 font-semibold">difermentasi</strong>, menghasilkan rasa dan tekstur yang luar biasa. Ia adalah semangat <strong class="text-red-500 font-semibold">'tiada sisa'</strong> yang diamalkan sejak dahulu kala, dihidupkan semula untuk anda!
+                    </p>
+                    <p>
+                        Mandai bukan hidangan biasa yang mudah dijumpai, ia adalah permata tersembunyi yang kini boleh anda nikmati. Rasai keajaiban transformasi <em class="italic">'dari buah kepada hidangan istimewa'</em> di setiap suapan!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Taste & Texture Section -->
+    <section id="rasa" class="py-16 md:py-28 bg-gray-100 section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-gray-100 px-4">Membongkar Profil Rasa & Tekstur Unik</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-lg text-gray-700 leading-relaxed space-y-6 order-2 md:order-1">
+                    <p>
+                        Bersiaplah untuk pengalaman rasa yang tiada duanya! Mandai Kulit Cempedak menawarkan profil rasa yang sangat unik dan kompleks. Ia adalah gabungan sempurna antara rasa <strong class="text-green-700 font-semibold">savuri</strong> yang mendalam, sentuhan <strong class="text-red-600 font-semibold">masam</strong> yang menyegarkan, dan sedikit <strong class="text-yellow-600 font-semibold">kemanisan semula jadi</strong> dari buah cempedak itu sendiri. Setiap gigitan adalah ledakan cita rasa yang memukau deria anda.
+                    </p>
+                    <p>
+                        Dan teksturnya? Ia benar-benar luar biasa! Mandai sering dibandingkan dengan <strong class="text-green-700 font-semibold">daging berserat seperti isi ayam yang dicarik</strong>. Kekal elok bila dimasak, ia menawarkan 'gigitan' yang memuaskan dan tidak mudah hancur. Bayangkan gabungan rasa dan tekstur ini dalam hidangan kegemaran anda – pasti akan membuat anda teruja!
+                    </p>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0">
+                    <img src="https://github.com/xhanafix/mandai/blob/main/IMG_20250816_162056.jpg?raw=true" alt="Cooked Mandai dish close-up" loading="lazy" class="rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out object-cover w-full h-72 md:h-96 border-4 border-yellow-300" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Versatility / How to Enjoy Section -->
+    <section id="kepelbagaian" class="py-16 md:py-28 bg-orange-50 section-bg-pattern section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-orange-50 px-4">Kepelbagaian Dalam Setiap Gigitan: Hidangan Serbaguna!</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 text-center mb-12 font-light">
+                Mandai bukan sekadar hidangan sampingan; ia adalah bintang yang boleh bersinar dalam pelbagai resipi!
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-green-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Tumis Pedas Menggoda</h3>
+                    <p class="text-gray-700 text-lg">
+                        Cara paling popular! Tumis Mandai bersama cili, bawang, bawang putih, dan ikan bilis untuk lauk yang membangkitkan selera dan sesuai dimakan dengan nasi panas. Rasa masam manis pedasnya pasti membuatkan anda ketagih!
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-yellow-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Snek Rangup & Nikmat</h3>
+                    <p class="text-gray-700 text-lg">
+                        Inginkan snek yang unik? Goreng Mandai sehingga rangup keemasan. Teksturnya yang renyah dan rasanya yang unik menjadikannya snek yang sempurna untuk dinikmati bila-bila masa.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-red-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Campuran dalam Masakan Lain</h3>
+                    <p class="text-gray-700 text-lg">
+                        Tambahkan Mandai ke dalam masakan gulai, sup, atau sebagai inti karipap untuk kelainan rasa. Kreativiti anda adalah batasnya! Ia akan menambah kedalaman rasa yang unik pada setiap hidangan.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition duration-500 ease-in-out border-b-4 border-blue-500">
+                    <div class="flex-shrink-0 text-yellow-600 text-5xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-700 mb-3">Rasa Nostalgia Kampung</h3>
+                    <p class="text-gray-700 text-lg">
+                        Bagi mereka yang membesar dengan masakan Banjar, Mandai adalah rasa pulang ke kampung halaman, mengimbau kenangan manis dan tradisi yang tidak lapuk dek zaman.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 mb-12 text-center">
+                <h3 class="text-3xl font-bold text-green-700 mb-8">Video Resipi: Cara Mudah Masak Mandai!</h3>
+                <div class="flex justify-center">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@nendagohq/video/7544620005833411847" data-video-id="7544620005833411847" style="max-width: 605px;min-height: 300px;" > <section> <a target="_blank" title="@nendagohq" href="https://www.tiktok.com/@nendagohq?refer=embed">@nendagohq</a> <p>Cara masak mandai kulit cempedak 🤤</p> <a target="_blank" title="♬ original sound - NENDA GOHQ" href="https://www.tiktok.com/music/original-sound-7544620092109400839?refer=embed">♬ original sound - NENDA GOHQ</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+            </div>
+
+            <p class="text-center text-2xl md:text-3xl text-green-800 font-bold mt-12 leading-snug">
+                Jadi, apa tunggu lagi? Bawa Mandai Kulit Cempedak ke dapur anda dan biarkan ia menyemarakkan selera!
+            </p>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section id="review" class="py-16 md:py-28 bg-orange-100 section-bg-pattern section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-orange-100 px-4">Review Pembeli</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+
+            <div class="mb-16">
+                <div class="relative overflow-hidden w-full max-w-lg mx-auto h-96 rounded-3xl shadow-2xl border-4 border-yellow-400 bg-white">
+                    <div class="absolute inset-0 flex flex-col">
+                        <div class="flex-1 overflow-hidden relative">
+                            <div id="review-track" class="flex flex-col h-full transition-transform duration-500 ease-in-out">
+                                <!-- Slide 1 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image1.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 1" loading="lazy">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image2.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 2" loading="lazy">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image3.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 3" loading="lazy">
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image4.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 4" loading="lazy">
+                                </div>
+                                <!-- Slide 5 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image5.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 5" loading="lazy">
+                                </div>
+                                <!-- Slide 6 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image6.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 6" loading="lazy">
+                                </div>
+                                <!-- Slide 7 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image7.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 7" loading="lazy">
+                                </div>
+                                <!-- Slide 8 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="./review/image8.jpg" class="max-w-full max-h-full object-contain rounded-lg" alt="Review 8" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-700 text-white text-center py-2 text-sm font-semibold">
+                            Review Pembeli
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="py-16 md:py-28 bg-gray-100 section-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-green-800 mb-16 relative">
+                <span class="relative z-10 bg-gray-100 px-4">Apa Kata Mereka yang Sudah Mencuba?</span>
+                <span class="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-28 h-1.5 bg-yellow-400 -mb-4 rounded-full z-0"></span>
+            </h2>
+
+            <!-- Auto Carousel Images -->
+            <div class="mb-16">
+                <div class="relative overflow-hidden w-full max-w-lg mx-auto h-96 rounded-3xl shadow-2xl border-4 border-yellow-400 bg-white">
+                    <div class="absolute inset-0 flex flex-col">
+                        <div class="flex-1 overflow-hidden relative">
+                            <div id="carousel-track" class="flex flex-col h-full transition-transform duration-500 ease-in-out">
+                                <!-- Slide 1 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/1.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 1" loading="lazy">
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/2.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 2" loading="lazy">
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/3.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 3" loading="lazy">
+                                </div>
+                                <!-- Slide 4 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/4.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 4" loading="lazy">
+                                </div>
+                                <!-- Slide 5 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/5.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 5" loading="lazy">
+                                </div>
+                                <!-- Slide 6 -->
+                                <div class="flex-shrink-0 w-full h-full flex items-center justify-center p-4">
+                                    <img src="https://github.com/xhanafix/mandai/blob/main/6.jpg?raw=true" class="max-w-full max-h-full object-contain rounded-lg" alt="Testimoni 6" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-green-700 text-white text-center py-2 text-sm font-semibold">
+                            Testimoni Pelanggan
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-green-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Rasa Mandai ni betul-betul macam arwah nenek saya buat! Terbaik, menggamit memori lama. Kualiti pun terjamin!"
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Puan Salmah, Peminat Tradisi</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-yellow-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Tak sangka kulit cempedak boleh jadi seunik dan sesedap ni! Memang lain dari yang lain, wajib cuba bagi pencari rasa baru!"
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Encik Johan, Penggemar Eksperimen Kuliner</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl text-center flex flex-col h-full transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-red-500">
+                    <p class="text-yellow-500 mb-5 text-4xl"><i class="fas fa-quote-left"></i></p>
+                    <p class="text-lg text-gray-700 italic mb-6 flex-grow">
+                        "Mudah sangat nak masak, terus jadi lauk favorite keluarga. Anak-anak pun suka! Senang kerja di dapur, dan puas hati dapat hidangkan makanan warisan."
+                    </p>
+                    <p class="font-bold text-green-700 text-xl">- Cik Amy, Suri Rumah Moden</p>
+                </div>
+                <!-- Wrapper for the two image testimonials to ensure balanced display in a 3-column grid -->
+                <div class="md:col-span-3 flex flex-col sm:flex-row justify-center items-stretch gap-10">
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col h-full items-center justify-center transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-blue-500 flex-1">
+                        <img src="https://github.com/xhanafix/mandai/blob/e7251d2350420b51ca4cfefc9d8aa697c1974e45/Screenshot_2025-09-07-14-04-12-361_com.zhiliaoapp.musically.jpg?raw=true" alt="Maklum Balas Pelanggan Mandai di media sosial" loading="lazy" class="rounded-xl object-contain w-full h-80" width="400" height="320" />
+                        <p class="font-bold text-green-700 text-md sm:text-lg mt-4 text-center">- Maklum Balas Pelanggan</p>
+                    </div>
+                    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col h-full items-center justify-center transform hover:scale-105 transition duration-500 ease-in-out border-t-4 border-purple-500 flex-1">
+                        <img src="https://github.com/xhanafix/mandai/blob/e7251d2350420b51ca4cfefc9d8aa697c1974e45/Screenshot_2025-09-07-14-04-17-919_com.zhiliaoapp.musically.jpg?raw=true" alt="Komen Pelanggan Mandai di media sosial" loading="lazy" class="rounded-xl object-contain w-full h-80" width="400" height="320" />
+                        <p class="font-bold text-green-700 text-md sm:text-lg mt-4 text-center">- Komen Pelanggan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="beli" class="py-16 md:py-28 bg-green-700 text-white text-center section-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 drop-shadow-lg leading-tight">
+                Jangan Tunggu Lagi! Rasai Keajaiban Mandai Kulit Cempedak Sekarang!
+            </h2>
+            <p class="text-xl md:text-2xl font-light mb-12">
+                Klik butang di bawah untuk mendapatkan Mandai Kulit Cempedak asli anda di kedai pilihan.
+                Sokong warisan, nikmati kelazatan!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                <a href="https://s.shopee.com.my/1qS4Ok1Lqy" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-green-800 font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg" alt="Shopee Logo" class="w-8 h-8 mr-3 filter drop-shadow-md" width="32" height="32"> Rasai Warisan Banjar di Shopee!
+                </a>
+                <a href="https://vt.tiktok.com/ZS9Mn8WL1LQ6w-PdSxo/" target="_blank" class="bg-gray-800 hover:bg-black text-white font-bold py-4 px-10 rounded-full shadow-2xl transition duration-300 ease-in-out transform hover:scale-105 text-lg flex items-center justify-center">
+                    <i class="fab fa-tiktok text-3xl mr-3 drop-shadow-md"></i> Dapatkan Mandai Asli di TikTok Shop!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="page-bottom" class="bg-gray-900 text-gray-300 py-10 md:py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">&copy; <span id="year"></span> Banjar Bites Empire (202503219414). Hak Cipta Terpelihara.</p>
+            <p class="mt-3 text-sm">Dicipta dengan semangat warisan Banjar dan cita rasa tempatan.</p>
+            <div class="flex justify-center space-x-6 mt-6 text-xl">
+                <a href="https://www.facebook.com/nendago" target="_blank" rel="noopener noreferrer" class="hover:text-white transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nendago_hq" target="_blank" rel="noopener noreferrer" class="hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@nendagohq" target="_blank" rel="noopener noreferrer" class="hover:text-white transition duration-300"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Section Fade-in Animation on Scroll using Intersection Observer API
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    entry.target.classList.remove('section-hidden');
+                    sectionObserver.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, {
+            root: null, // viewport as the root
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        });
+
+        // Add initial 'section-hidden' class to all sections except the hero
+        document.querySelectorAll('section:not(#hero)').forEach(section => {
+            section.classList.add('section-hidden');
+            sectionObserver.observe(section); // Start observing each section
+        });
+
+        // Auto Carousel Logic
+        const carouselTrack = document.getElementById('carousel-track');
+        const slides = carouselTrack ? carouselTrack.children : [];
+        let currentSlide = 0;
+        let slideInterval;
+
+        function nextSlide() {
+            if (slides.length === 0) return;
+            
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            
+            // Calculate the translation percentage
+            const translateValue = -currentSlide * 100;
+            carouselTrack.style.transform = `translateY(${translateValue}%)`;
+        }
+
+        function startCarousel() {
+            if (slides.length > 0) {
+                slideInterval = setInterval(nextSlide, 3500); // Change slide every 3.5 seconds
+            }
+        }
+
+        function stopCarousel() {
+            clearInterval(slideInterval);
+        }
+
+        // Initialize Carousel if element exists
+        if (carouselTrack) {
+            // Start immediately
+            startCarousel();
+
+            // Optional: Pause on hover for better UX
+            const carouselContainer = carouselTrack.closest('.relative');
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', stopCarousel);
+                carouselContainer.addEventListener('mouseleave', startCarousel);
+            }
+        }
+
+        // Review Auto Carousel Logic
+        const reviewTrack = document.getElementById('review-track');
+        const reviewSlides = reviewTrack ? reviewTrack.children : [];
+        let currentReviewSlide = 0;
+        let reviewInterval;
+
+        function nextReviewSlide() {
+            if (reviewSlides.length === 0) return;
+            
+            currentReviewSlide++;
+            if (currentReviewSlide >= reviewSlides.length) {
+                currentReviewSlide = 0;
+            }
+            
+            const translateValue = -currentReviewSlide * 100;
+            reviewTrack.style.transform = `translateY(${translateValue}%)`;
+        }
+
+        function startReviewCarousel() {
+            if (reviewSlides.length > 0) {
+                reviewInterval = setInterval(nextReviewSlide, 3500);
+            }
+        }
+
+        function stopReviewCarousel() {
+            clearInterval(reviewInterval);
+        }
+
+        if (reviewTrack) {
+            startReviewCarousel();
+            const reviewContainer = reviewTrack.closest('.relative');
+            if (reviewContainer) {
+                reviewContainer.addEventListener('mouseenter', stopReviewCarousel);
+                reviewContainer.addEventListener('mouseleave', startReviewCarousel);
+            }
+        }
+
+        // FOMO Social Proof Notification Logic
+        const fomoNames = [
+            { name: "Siti", location: "Kuala Lumpur" },
+            { name: "Ahmad", location: "Johor Bahru" },
+            { name: "Nurul", location: "Shah Alam" },
+            { name: "Hafiz", location: "Penang" },
+            { name: "Farid", location: "Ipoh" },
+            { name: "Aina", location: "Kota Kinabalu" },
+            { name: "Rozita", location: "Kuching" },
+            { name: "Mei Ling", location: "Melaka" },
+            { name: "Kumar", location: "Seremban" },
+            { name: "Jamil", location: "Alor Setar" },
+            { name: "Zahra", location: "Putrajaya" },
+            { name: "Daniel", location: "Klang" },
+            { name: "Intan", location: "Miri" },
+            { name: "Syafiq", location: "Petaling Jaya" },
+            { name: "Lily", location: "Kuantan" },
+            { name: "Rajoo", location: "Batu Pahat" },
+            { name: "Fiza", location: "Sungai Petani" },
+            { name: "Harith", location: "Taiping" },
+            { name: "Bella", location: "Subang Jaya" },
+            { name: "Azman", location: "Kota Bharu" },
+            { name: "Nadia", location: "Sibu" },
+            { name: "Faiz", location: "Bintulu" },
+            { name: "Chua", location: "Johor Lama" },
+            { name: "Sarah", location: "Cyberjaya" },
+            { name: "Ravi", location: "Kluang" },
+            { name: "Hani", location: "Langkawi" },
+            { name: "Imran", location: "Kuala Terengganu" },
+            { name: "Yati", location: "Marang" },
+            { name: "Ben", location: "Sandakan" },
+            { name: "Nina", location: "Tawau" },
+            { name: "Osman", location: "Pengkalan Chepa" },
+            { name: "Liza", location: "Bukit Mertajam" },
+            { name: "Wan", location: "Jitra" },
+            { name: "Grace", location: "Kota Damansara" },
+            { name: "Siva", location: "Rawang" },
+            { name: "Emma", location: "Port Dickson" },
+            { name: "Ridzuan", location: "Temerloh" },
+            { name: "Tasha", location: "Segamat" },
+            { name: "Bala", location: "Ipoh Garden" },
+            { name: "Ika", location: "Bachok" },
+            { name: "Joe", location: "Skudai" },
+            { name: "Dira", location: "Sepang" },
+            { name: "Munir", location: "Lumut" },
+            { name: "Cindy", location: "Puchong" },
+            { name: "Aziz", location: "Dungun" },
+            { name: "Yusof", location: "Kuala Kangsar" },
+            { name: "Veni", location: "Teluk Intan" },
+            { name: "Haziq", location: "Bangi" },
+            { name: "Lina", location: "Selayang" },
+            { name: "Tan", location: "Butterworth" },
+            { name: "Farah", location: "Ampang" },
+            { name: "Rashid", location: "Gombak" },
+            { name: "Jihan", location: "Setapak" },
+            { name: "Khalid", location: "Mentakab" },
+            { name: "Sofea", location: "Cheras" }
+        ];
+
+        const fomoNotification = document.getElementById('fomo-notification');
+        const fomoAvatar = document.getElementById('fomo-avatar');
+        const fomoText = document.getElementById('fomo-text');
+
+        function showRandomFomo() {
+            const buyer = fomoNames[Math.floor(Math.random() * fomoNames.length)];
+            fomoAvatar.textContent = buyer.name.charAt(0);
+            fomoText.innerHTML = `<strong>${buyer.name}</strong> dari ${buyer.location} baru sahaja beli Mandai Kulit Cempedak!`;
+            fomoNotification.classList.add('show');
+
+            setTimeout(() => {
+                fomoNotification.classList.remove('show');
+            }, 4000);
+        }
+
+        // Show first notification after 5 seconds, then every 8 seconds
+        setTimeout(() => {
+            showRandomFomo();
+            setInterval(showRandomFomo, 8000);
+        }, 5000);
+    </script>
+
+    <!-- FOMO Social Proof Notification -->
+    <div id="fomo-notification" class="fomo-notification">
+        <div class="fomo-avatar" id="fomo-avatar">A</div>
+        <div class="fomo-text" id="fomo-text"></div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/601128849402" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Floating CTA Bar (Always Visible) -->
+    <div class="floating-cta-bar">
+        <a href="https://s.shopee.com.my/1qS4Ok1Lqy" target="_blank" rel="noopener noreferrer" class="cta-shopee">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg" alt="Shopee Logo" class="filter drop-shadow-md"> Beli di Shopee
+        </a>
+        <a href="https://vt.tiktok.com/ZS9Mn8WL1LQ6w-PdSxo/" target="_blank" rel="noopener noreferrer" class="cta-tiktok">
+            <i class="fab fa-tiktok mr-1"></i> Beli di TikTok
+        </a>
+    </div>
+</body>
+</html>
